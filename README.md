@@ -12,9 +12,9 @@ The **IGES-to-FLITE2D integration framework**, developed by Prof. R. Sevilla, en
 
 ### **1. Baseline NACA0012 Profile Representation**
 The baseline NACA0012 aerofoil is represented using **NURBS curves**, defined parametrically as:
-\begin{equation}
-		\mathbf{C}(u) = \frac{\sum_{i=0}^{n} \mathcal{N}_{i,p}(u) \mathbf{P}_i w_i}{\sum_{i=0}^{n} \mathcal{N}_{i,p}(u) w_i}
-\end{equation}
+$$
+\mathbf{C}(u) = \frac{\sum_{i=0}^{n} \mathcal{N}_{i,p}(u) \mathbf{P}_i w_i}{\sum_{i=0}^{n} \mathcal{N}_{i,p}(u) w_i}
+$$
 
 ```
 N_{i,0}(u) = 1, if λ_i <= u < λ_{i+1}
