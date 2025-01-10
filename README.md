@@ -30,12 +30,10 @@ where:
 The B-spline basis functions \( \mathcal{N}_{i,p}(u) \) are recursively defined as:
 
 1. **For \( p = 0 \)** (piecewise constant basis functions):
-
-![equation](https://latex.codecogs.com/svg.image?\color{White}\mathcal{N}_{i,0}(u)=\begin{cases}1,&\lambda_i\leq%20u<\lambda_{i+1}\\0,&\text{otherwise}\end{cases})
+   ![equation](https://latex.codecogs.com/svg.image?\color{White}\mathcal{N}_{i,0}(u)=\begin{cases}1,&\lambda_i\leq%20u<\lambda_{i+1}\\0,&\text{otherwise}\end{cases})
 
 2. **For \( p > 0 \)** (higher-degree basis functions):
-
-![equation](https://latex.codecogs.com/svg.image?\color{White}\mathcal{N}_{i,p}(u)=\frac{u-\lambda_i}{\lambda_{i+p}-\lambda_i}\mathcal{N}_{i,p-1}(u)+\frac{\lambda_{i+p+1}-u}{\lambda_{i+p+1}-\lambda_{i+1}}\mathcal{N}_{i+1,p-1}(u))
+   ![equation](https://latex.codecogs.com/svg.image?\color{White}\mathcal{N}_{i,p}(u)=\frac{u-\lambda_i}{\lambda_{i+p}-\lambda_i}\mathcal{N}_{i,p-1}(u)+\frac{\lambda_{i+p+1}-u}{\lambda_{i+p+1}-\lambda_{i+1}}\mathcal{N}_{i+1,p-1}(u))
 
 where \( \{ \lambda_0, \lambda_1, \ldots, \lambda_m \} \) is the **knot vector**.
 
@@ -43,6 +41,8 @@ where \( \{ \lambda_0, \lambda_1, \ldots, \lambda_m \} \) is the **knot vector**
 
 ### **2. Control Points for the Baseline NACA0012 Profile**
 The baseline NACA0012 profile is defined by 8 control points. Curves 4 and 5 represent the **upper and lower surfaces** of the aerofoil.
+
+#### **Baseline Control Point Coordinates:**
 
 | **Control Pt** | **X-Coordinate (+)** | **Y-Coordinate (+)** | **X-Coordinate (-)** | **Y-Coordinate (-)** |
 |----------------|----------------------|----------------------|---------------------|---------------------|
@@ -64,12 +64,12 @@ To generate morphed aerofoil profiles, control points are perturbed within prede
 
 | **Control Pt** | **ΔX (upper surface)** | **ΔY (upper surface)** | **ΔX (lower surface)** | **ΔY (lower surface)** |
 |----------------|------------------------|------------------------|-----------------------|-----------------------|
-| 2              | \(4.3 \times 10^{-2}\)  | \(2.2 \times 10^{-2}\)  | N/A                   | N/A                   |
-| 3              | \(4.3 \times 10^{-2}\)  | \(2.2 \times 10^{-2}\)  | \(4.3 \times 10^{-2}\)| \(2.2 \times 10^{-2}\) |
-| 4              | \(3.1 \times 10^{-2}\)  | \(1.5 \times 10^{-2}\)  | \(4.5 \times 10^{-2}\)| \(2.3 \times 10^{-2}\) |
-| 5              | \(2.5 \times 10^{-2}\)  | \(1.2 \times 10^{-2}\)  | \(3.9 \times 10^{-5}\)| \(1.9 \times 10^{-5}\) |
-| 6              | \(1.5 \times 10^{-2}\)  | \(7.4 \times 10^{-3}\)  | \(3.2 \times 10^{-2}\)| \(1.6 \times 10^{-2}\) |
-| 7              | \(5.3 \times 10^{-3}\)  | \(2.7 \times 10^{-3}\)  | \(1.9 \times 10^{-2}\)| \(9.6 \times 10^{-3}\) |
+| 2              | ![equation](https://latex.codecogs.com/svg.image?\color{White}4.3%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}2.2%20\times%2010^{-2}) | N/A | N/A |
+| 3              | ![equation](https://latex.codecogs.com/svg.image?\color{White}4.3%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}2.2%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}4.3%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}2.2%20\times%2010^{-2}) |
+| 4              | ![equation](https://latex.codecogs.com/svg.image?\color{White}3.1%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}1.5%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}4.5%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}2.3%20\times%2010^{-2}) |
+| 5              | ![equation](https://latex.codecogs.com/svg.image?\color{White}2.5%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}1.2%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}3.9%20\times%2010^{-5}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}1.9%20\times%2010^{-5}) |
+| 6              | ![equation](https://latex.codecogs.com/svg.image?\color{White}1.5%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}7.4%20\times%2010^{-3}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}3.2%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}1.6%20\times%2010^{-2}) |
+| 7              | ![equation](https://latex.codecogs.com/svg.image?\color{White}5.3%20\times%2010^{-3}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}2.7%20\times%2010^{-3}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}1.9%20\times%2010^{-2}) | ![equation](https://latex.codecogs.com/svg.image?\color{White}9.6%20\times%2010^{-3}) |
 
 ---
 
@@ -77,3 +77,12 @@ To generate morphed aerofoil profiles, control points are perturbed within prede
 - The **Halton sequence** is used to generate uniformly distributed samples for perturbations of the control points.
 - The sampling process ensures that the perturbations cover the design space evenly for each control point.
 
+---
+
+## **Key Insights**
+1. **Baseline Geometry Representation:**  
+   The baseline geometry is accurately defined using **NURBS curves**, enabling smooth and flexible control over the aerofoil shape.
+2. **Perturbation Methodology:**  
+   Control points are perturbed within the specified bounds along both **x** and **y** directions. This variation results in a wide range of morphed aerofoil profiles.
+3. **Halton Sampling:**  
+   The **Halton sequence** ensures low-discrepancy sampling, providing an even distribution across the design space.
